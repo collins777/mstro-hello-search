@@ -1,10 +1,20 @@
 //  VENDOR FILES
 @import "vendor/reset";
 
-// ABSTRACT FILES
+// BASE
+@import "base/variables";
+@import "base/global";
 
-// BASE FILES
-@import "components/global";
-@import "components/navigation";
-@import "components/search-form";
-@import "components/search-results";
+// COMPONENTS
+@import "components/buttons";
+@import "components/icons";
+
+// LAYOUT
+@import "layout/navigation";
+@import "layout/search-form";
+@import "layout/search-results";
+
+// HELPERS
+@import "helpers/mixins";
+@import "helpers/media-queries";
+@import "helpers/animations";

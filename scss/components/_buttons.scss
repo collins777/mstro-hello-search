@@ -1,0 +1,19 @@
+.btn {
+  padding: 1rem 2.5rem;
+  background-color: $primary-green;
+  border-radius: 2rem;
+  margin: 1rem 0;
+  text-transform: uppercase;
+  color: #eee;
+  font-size: 1.4rem;
+  transition: all 0.4s;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0.5rem 0.5rem 2rem rgba(0, 0, 0, 0.2);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+}

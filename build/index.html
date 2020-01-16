@@ -40,58 +40,58 @@
         <i class="fas fa-heart icon--heart"></i>
         <i class="fas fa-bell icon--bell"></i>
         <i class="fas fa-chevron-down icon--chevron-down"></i>
-        <i class="fas fa-star icon--star"></i>
       </div>
     </header>
-    <!-- SEARCH FORM -->
-    <form id="search--form">
-      <h1>Hello Search</h1>
 
-      <!-- Search Input -->
-
-      <input
-        type="text"
-        class="search--input"
-        id="search--input"
-        name="name"
-        placeholder="Search Topic"
-        required
-      />
-
-      <!-- Dropdown for Sorting -->
-
-      <div class="sort--container">
-        <select name="sortby" id="sortby" class="select--input">
-          <option selected disabled hidden>Sort By</option>
-          <option value="relevance">Relevance</option>
-          <option value="latest">Latest</option>
-        </select>
-      </div>
-
-      <!-- Dropdown for Limiting Results -->
-
-      <div class="limit--container">
-        <select name="limit" id="limit" class="select--input">
-          <option selected disabled hidden>Limit By</option>
-          <option value="6">6</option>
-          <option value="9">9</option>
-          <option value="12">12</option>
-        </select>
-      </div>
-
-      <!-- Submit Button -->
-      <input type="submit" />
-    </form>
     <!-- SEARCH RESULTS -->
     <section>
-      <div class="container">
-        <h1 class="heading">Meet The Team</h1>
+      <div class="container" id="container">
+        <!-- SEARCH FORM -->
+        <form id="search--form">
+          <h1>Hello Search</h1>
+
+          <!-- Search Input -->
+
+          <input
+            type="text"
+            class="search--input"
+            id="search--input"
+            name="name"
+            placeholder="Search Topic"
+            required
+          />
+
+          <!-- Dropdown for Sorting -->
+
+          <div class="sort--container">
+            <select name="sortby" id="sortby" class="select--input">
+              <!-- <option disabled hidden>Sort By</option> -->
+              <option value="relevance">Relevance</option>
+              <option selected value="latest">Latest</option>
+            </select>
+          </div>
+
+          <!-- Dropdown for Limiting Results -->
+
+          <div class="limit--container">
+            <select name="limit" id="limit" class="select--input">
+              <!-- <option disabled hidden>Limit By</option> -->
+              <option value="6">6</option>
+              <option value="9">9</option>
+              <option value="12">12</option>
+            </select>
+          </div>
+
+          <!-- Submit Button -->
+          <input type="submit" />
+        </form>
+        <div id="results"></div>
         <div class="card-wrapper">
           <div class="card">
             <img
               src="https://images.unsplash.com/photo-1549068106-b024baf5062d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
               alt="Person"
-              class="card-img"
+              class="card--img"
             />
             <h1>Loki</h1>
             <p class="job-title">Frontend Developer</p>
@@ -101,26 +101,23 @@
               Atque exercitationem cumque voluptatum!
             </p>
             <a href="#" class="btn">Contact</a>
-            <ul class="social-media">
-              <li>
-                <a href="#"><i class="fab fa-facebook-square"></i></a>
-              </li>
-              <li>
-                <a href="#"><i class="fab fa-twitter-square"></i></a>
-              </li>
-              <li>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-              </li>
-              <li>
-                <a href="#"><i class="fab fa-google-plus-square"></i></a>
-              </li>
+            <ul class="card-footer">
+              <div class="card-footer--left">
+                <p>Jan 19 2018 &nbsp; &#8226; &nbsp;</p>
+
+                <span> <i class="fas fa-star icon--star">&nbsp;</i>82 </span>
+              </div>
+              <div class="card-footer--right">
+                <i class="fas fa-th-list icon--list"></i>
+                <i class="fas fa-heart icon--heart"></i>
+              </div>
             </ul>
           </div>
           <div class="card">
             <img
               src="https://images.unsplash.com/photo-1549068106-b024baf5062d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
               alt="Person"
-              class="card-img"
+              class="card--img"
             />
             <h1>Loki</h1>
             <p class="job-title">Frontend Developer</p>
@@ -130,26 +127,23 @@
               Atque exercitationem cumque voluptatum!
             </p>
             <a href="#" class="btn">Contact</a>
-            <ul class="social-media">
-              <li>
-                <a href="#"><i class="fab fa-facebook-square"></i></a>
-              </li>
-              <li>
-                <a href="#"><i class="fab fa-twitter-square"></i></a>
-              </li>
-              <li>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-              </li>
-              <li>
-                <a href="#"><i class="fab fa-google-plus-square"></i></a>
-              </li>
+            <ul class="card-footer">
+              <div class="card-footer--left">
+                <p>Jan 19 2018 &nbsp; &#8226; &nbsp;</p>
+
+                <span> <i class="fas fa-star icon--star">&nbsp;</i>82 </span>
+              </div>
+              <div class="card-footer--right">
+                <i class="fas fa-th-list icon--list"></i>
+                <i class="fas fa-heart icon--heart"></i>
+              </div>
             </ul>
           </div>
           <div class="card">
             <img
               src="https://images.unsplash.com/photo-1549068106-b024baf5062d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
               alt="Person"
-              class="card-img"
+              class="card--img"
             />
             <h1>Loki</h1>
             <p class="job-title">Frontend Developer</p>
@@ -159,51 +153,20 @@
               Atque exercitationem cumque voluptatum!
             </p>
             <a href="#" class="btn">Contact</a>
-            <ul class="social-media">
-              <li>
-                <a href="#"><i class="fab fa-facebook-square"></i></a>
-              </li>
-              <li>
-                <a href="#"><i class="fab fa-twitter-square"></i></a>
-              </li>
-              <li>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-              </li>
-              <li>
-                <a href="#"><i class="fab fa-google-plus-square"></i></a>
-              </li>
-            </ul>
-          </div>
-          <div class="card">
-            <img
-              src="https://images.unsplash.com/photo-1549068106-b024baf5062d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
-              alt="Person"
-              class="card-img"
-            />
-            <h1>Loki</h1>
-            <p class="job-title">Frontend Developer</p>
-            <p class="about">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores
-              itaque nesciunt omnis beatae repudiandae blanditiis architecto.
-              Atque exercitationem cumque voluptatum!
-            </p>
-            <a href="#" class="btn">Contact</a>
-            <ul class="social-media">
-              <li>
-                <a href="#"><i class="fab fa-facebook-square"></i></a>
-              </li>
-              <li>
-                <a href="#"><i class="fab fa-twitter-square"></i></a>
-              </li>
-              <li>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-              </li>
-              <li>
-                <a href="#"><i class="fab fa-google-plus-square"></i></a>
-              </li>
+            <ul class="card-footer">
+              <div class="card-footer--left">
+                <p>Jan 19 2018 &nbsp; &#8226; &nbsp;</p>
+
+                <span> <i class="fas fa-star icon--star">&nbsp;</i>82 </span>
+              </div>
+              <div class="card-footer--right">
+                <i class="fas fa-th-list icon--list"></i>
+                <i class="fas fa-heart icon--heart"></i>
+              </div>
             </ul>
           </div>
         </div>
+        -->
       </div>
     </section>
   </body>

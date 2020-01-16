@@ -1,0 +1,115 @@
+/// Note : 1rem is 10px
+
+.heading {
+  text-transform: uppercase;
+  font-size: 3.5rem;
+  letter-spacing: 3px;
+  margin-right: -3px;
+  margin-bottom: 5rem;
+  text-align: center;
+  color: #333;
+  position: relative;
+}
+
+.heading::after {
+  content: "";
+  width: 10rem;
+  height: 0.8rem;
+  background-color: $primary-green;
+  position: absolute;
+  bottom: -2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 2rem;
+}
+
+.card-wrapper {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  flex-direction: column;
+}
+
+.card {
+  width: 32rem;
+  background-color: #ebeef8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem 0;
+  border-radius: 0.5rem;
+  box-shadow: 0.5rem 0.5rem 3rem rgba(0, 0, 0, 0.2);
+  transition: transform 0.4s;
+
+  &--img {
+    width: 100%;
+    height: 26rem;
+    object-fit: cover;
+    // Cool Lil Image effect from https://bennettfeely.com/clippy/
+    -webkit-clip-path: polygon(0 0, 100% 0%, 100% 90%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0%, 100% 90%, 0% 100%);
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin: 1.5rem 0;
+  }
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.card-footer {
+  display: grid;
+  grid-template-columns: 80% auto;
+  // display: flex;
+  // justify-content: space-between;
+
+  width: 100%;
+  padding: 2rem 0;
+  margin-top: 1.5rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  color: #777;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+
+  &--left {
+    display: flex;
+    justify-content: flex-start;
+    padding: 0 2rem;
+  }
+
+  &--right {
+    display: flex;
+    justify-content: space-evenly;
+  }
+}
+
+.job-title {
+  color: #777;
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+.about {
+  font-size: 1.5rem;
+  margin: 1.5rem 0;
+  font-style: italic;
+  text-align: center;
+  color: #333;
+}
+
+.social-media {
+  width: 100%;
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 2rem 0;
+  margin-top: 1.5rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
