@@ -1,4 +1,4 @@
-const searchForm = document.getElementById("search--form");
+const searchForm = document.getElementById("search-form");
 const searchInput = document.getElementById("search--input");
 const sortSelectInput = document.getElementById("sortby");
 const limitSelectInput = document.getElementById("limit");

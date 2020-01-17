@@ -7,10 +7,6 @@
     <!-- MASTER CSS LINK -->
     <link rel="stylesheet" href="./css/style.min.css" />
     <!-- FONT AWESOME CDN -->
-    <!-- <link
-      rel="stylesheet"
-      href="path/to/font-awesome/css/font-awesome.min.css"
-    /> -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
@@ -26,20 +22,49 @@
   <body>
     <!-- NAVIGATION -->
     <header>
-      <img src="assets/images/logosmall.png" alt="Hello Search logo" />
+      <img src="assets/images/logo.png" alt="Hello Search logo" class="logo" />
+
       <nav>
-        <ul class="nav--links">
+        <ul class="nav-links">
           <li><a href="#">Dashboard</a></li>
           <li><a href="#">Membership</a></li>
           <li><a href="#">My Courses</a></li>
           <li><a href="#">Diagnostic</a></li>
         </ul>
       </nav>
-      <div class="nav--icons">
-        <i class="fas fa-th-list icon--list"></i>
-        <i class="fas fa-heart icon--heart"></i>
-        <i class="fas fa-bell icon--bell"></i>
-        <i class="fas fa-chevron-down icon--chevron-down"></i>
+      <div class="nav-icons">
+        <div class="nav-icons__box">
+          <svg class="icon icon-open-book">
+            <use xlink:href="assets/icons/sprite.svg#icon-open-book"></use>
+          </svg>
+        </div>
+        <div class="nav-icons__box">
+          <svg class="icon icon-heart1">
+            <use xlink:href="assets/icons/sprite.svg#icon-heart1"></use>
+          </svg>
+        </div>
+
+        <div class="nav-icons__box">
+          <svg class="icon icon-bell1">
+            <use xlink:href="assets/icons/sprite.svg#icon-bell1"></use>
+          </svg>
+          <!-- Notifications Circle -->
+          <span class="nav-notification"></span>
+        </div>
+        <div class="nav-user">
+          <img
+            src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
+            alt="User Image"
+            class="nav-user__photo"
+          />
+        </div>
+        <div class="nav-icons__box">
+          <svg class="icon icon-chevron-thin-down">
+            <use
+              xlink:href="assets/icons/sprite.svg#icon-chevron-thin-down"
+            ></use>
+          </svg>
+        </div>
       </div>
     </header>
 
@@ -47,43 +72,49 @@
     <section>
       <div class="container" id="container">
         <!-- SEARCH FORM -->
-        <form id="search--form">
-          <h1>Hello Search</h1>
+        <form id="search-form">
+          <div class="search-form-container">
+            <!-- <h1>Hello Search</h1> -->
 
-          <!-- Search Input -->
+            <!-- Search Input -->
+            <div class="search-form-container__left">
+              <svg class="icon icon-magnifying-glass ">
+                <use
+                  xlink:href="assets/icons/sprite.svg#icon-magnifying-glass"
+                ></use>
+              </svg>
+              <input
+                type="text"
+                class="search--input"
+                id="search--input"
+                name="name"
+                placeholder="Search Topic"
+                required
+              />
+            </div>
 
-          <input
-            type="text"
-            class="search--input"
-            id="search--input"
-            name="name"
-            placeholder="Search Topic"
-            required
-          />
+            <div class="search-form-container__right">
+              <!-- Dropdown for Sorting -->
+              <select name="sortby" id="sortby" class="select--input">
+                <!-- <option disabled hidden>Sort By</option> -->
+                <option value="relevance">Relevance</option>
+                <option selected value="latest">Latest</option>
+              </select>
+              <!-- Dropdown for Limiting Results -->
 
-          <!-- Dropdown for Sorting -->
+              <div class="limit--container">
+                <select name="limit" id="limit" class="select--input">
+                  <!-- <option disabled hidden>Limit By</option> -->
+                  <option value="6">6</option>
+                  <option value="9">9</option>
+                  <option value="12">12</option>
+                </select>
+              </div>
 
-          <div class="sort--container">
-            <select name="sortby" id="sortby" class="select--input">
-              <!-- <option disabled hidden>Sort By</option> -->
-              <option value="relevance">Relevance</option>
-              <option selected value="latest">Latest</option>
-            </select>
+              <!-- Submit Button -->
+              <input type="submit" />
+            </div>
           </div>
-
-          <!-- Dropdown for Limiting Results -->
-
-          <div class="limit--container">
-            <select name="limit" id="limit" class="select--input">
-              <!-- <option disabled hidden>Limit By</option> -->
-              <option value="6">6</option>
-              <option value="9">9</option>
-              <option value="12">12</option>
-            </select>
-          </div>
-
-          <!-- Submit Button -->
-          <input type="submit" />
         </form>
         <div id="results"></div>
         <!-- <div class="card-wrapper">
