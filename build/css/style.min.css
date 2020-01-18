@@ -151,9 +151,6 @@ li,
 a {
   text-decoration: none; }
 
-a:link {
-  color: #808080; }
-
 .container {
   padding: 0 2rem; }
 
@@ -170,7 +167,8 @@ a:link {
     transform: translateY(-2px);
     box-shadow: 0.5rem 0.5rem 2rem rgba(0, 0, 0, 0.2); }
   .btn:active {
-    transform: translateY(0); }
+    transform: translateY(0);
+    color: #eee; }
 
 .social-media i {
   font-size: 3rem; }
@@ -199,9 +197,12 @@ a:link {
 
 .icon-open-book,
 .icon-heart1,
-.icon-bell1 {
-  height: 2.5rem;
-  width: 2.5rem; }
+.icon-bell1,
+.icon-bell-o,
+.icon-file-text {
+  height: 2rem;
+  width: 2rem;
+  fill: #777; }
 
 .icon-chevron-thin-down {
   height: 1.5rem;
@@ -234,7 +235,10 @@ header {
 
 .nav-icons {
   display: flex;
-  align-items: center; }
+  align-items: center;
+  justify-content: space-around; }
+  .nav-icons > * {
+    margin-right: 1rem; }
 
 .nav-user__photo {
   height: 4rem;

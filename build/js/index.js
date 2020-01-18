@@ -74,7 +74,7 @@ const truncateText = (string, stringLimit) => {
 
 const getRedditData = (searchTerm, sortBy, searchLimit) => {
   return fetch(
-    `http://www.reddit.com/search.json?q=${searchTerm}&sor${sortBy}&limit=${searchLimit}`
+    `https://www.reddit.com/search.json?q=${searchTerm}&sor${sortBy}&limit=${searchLimit}`
   )
     .then(res => res.json()) // parse into json format
     .then(data => data.data.children.map(data => data.data)) // store data in json object
