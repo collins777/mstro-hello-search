@@ -9,3 +9,25 @@
     margin: 2rem;
   }
 }
+
+@include tablet {
+  .search-form-container {
+    display: flex;
+    flex-direction: column;
+
+    padding: 4rem 0;
+    width: 100%;
+    flex: 0 0 50%;
+
+    .search-input {
+      width: 10rem;
+    }
+
+    &__right {
+      display: flex;
+      justify-content: space-evenly;
+      padding: 2rem;
+      margin-left: -2.5rem;
+    }
+  }
+}

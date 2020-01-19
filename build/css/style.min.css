@@ -397,6 +397,21 @@ header {
   .card {
     margin: 2rem; } }
 
+@media screen and (max-width: 768px) {
+  .search-form-container {
+    display: flex;
+    flex-direction: column;
+    padding: 4rem 0;
+    width: 100%;
+    flex: 0 0 50%; }
+    .search-form-container .search-input {
+      width: 10rem; }
+    .search-form-container__right {
+      display: flex;
+      justify-content: space-evenly;
+      padding: 2rem;
+      margin-left: -2.5rem; } }
+
 @keyframes fadeIn {
   from {
     opacity: 0; }
